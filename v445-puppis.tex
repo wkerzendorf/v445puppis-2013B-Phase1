@@ -380,21 +380,10 @@
  thick equatorial waist (Woudt et al. 2009, ApJ 706, 738; also, ESO
  press release 0943).
 
- The pretty nebula also posed a problem, however, in that the
- equatorial waist obscures the binary. However, new NACO imaging revealed that the dust had "settled" and
- the star is visible again: In 2012, we obtained K-Band images that show that the star is visible with a magnitude of $\textrm{K}=15.5$ (for comparison see Figure~\ref{fig:v445img}) .
+ The pretty nebula also poses a problem, however, in that the
+ equatorial waist obscures the binary. In the 2007 image by Woudt et al. the central star was not visible, however, our new image from late 2012 revealed that the dust had "settled" for the star to be visible (for comparison see Figure~\ref{fig:v445img}). This only took half of our allocated time so we changed the OB and obtained a spectrum. With a S/N=6 the quality was too low for us to extract any useful information.
  
-Pre-explosion V445 Pup had
- $V\simeq14.5$ and $V-K\simeq3.0$. In addition, it was variable at the
- 10\% level.  At the distance of $8.2\pm0.5\,$kpc inferred from the
- expansion of the nebula by Woudt et al., and correcting for
- interstellar reddening $E_{B-V}\simeq0.5$, this corresponds to a
- luminosity of $L\simeq2000\,L_\odot$ and a color $(V-K)_0\simeq1.6$
- (the object may be more luminous and bluer if there is substantial
- circumstellar reddening; Woudt et al., ibid). With these information we conclude that currently there's a extinction of $A_\textrm{K} = 4$.
- 
-
- The inferred luminosity is very high for a cataclysmic variable, and
+ From pre-explosion imaging we measure an unusual high luminosity  for a cataclysmic variable, and
  the system's nature thus remains unclear: is the companion very
  luminous (but it is too blue to be a symbiotic), is the accretion
  disk very large, or did the system host a supersoft source?
@@ -420,17 +409,18 @@ Pre-explosion V445 Pup had
 %
 }
 
-\ImmediateObjective{We propose to use 4 hours of NACO AO spectropscopy to
+\ImmediateObjective{We propose to use 2 hours of NACO AO spectropscopy to
  ascertain its nature: Is the binary hydrogen or helium rich? How
  large and luminous is the companion? How large is the accretion
  disk? Did the system host a supersoft source?
+
 
 In our previous observation run we detected stars magnitude to $K\approx15.5$. 
 For constant expansion, the dust column density and
  hence the extinction scale as $\rho R\propto R^{-2}\propto t^{-2}$,
  and thus in late 2013/early 2014 it should be reduced to $K\approx15.3$.
  
- 
+ ??? WE use Slit_86mas with spectroscopic mode S54_3_SK - high resolution (R~1400) - 1.79-2.57 um ??
  We propose two OBs with 0.7 h on target, to get a spectrum with the necessary quality to obtain the aforementioned science goals.
 
 %
@@ -464,38 +454,17 @@ For constant expansion, the dust column density and
 \WhyNights{%
  To measure the Hydrogen/Helium emission lines as well as stellar parameters we need a spectrum with a S/N$\approx20$. 
  
- We suggest 
- Thus, we propose to use the same setup as that used by Woudt et al.\
- (which has the additional benefit that it will be easier to use the
- images for possible studies of the nebula's evolution): detector
- integration time of 45s (using DoubleRdRstRd we incur 0.7 sec
- overhead), 4 coadds and 12 dithers with an overhead of 27 s each.
- Adding 16.25 minutes of telescope acquisition time, the implied
- total time is $t_{\rm OB}= 975 + 12 \times (27 + 4 \times (45 +
- 0.7))\,\textrm{s} = 0.95\,$h, which, not coincidentally, nicely fits
- in one 1-hr OB.
+ Our previous observations used the acquisition template `NACO_img_acq_MoveToSlit'  with 00:17:41.00 and 4 coadds with 634.75~s each filling an OB with exactly one hour (to obtain an ABBA pattern). Which leaves  4 integration times of 634.75 s to fill an hour. We propose for two such OBs, which results in a S/N of 20 using the ETC
 
- Two OBs would make it possible for us to detect the source down to a
- limiting magnitude of $K=18.1$, so that, if the source is still not
- detected, we know it will be pointless to return to this source for
- $\sim\!5$ years.
-
- We request taking the two Observation blocks a few weeks apart, so
- that, if a source is detected and relatively bright in the first OB,
- we could decide to do immediate spectroscopy on the target using the
- second one.
-%
 }
 
 \TelescopeJustification{V445 Puppis is currently enshrouded in dust,
-and we expect extinctions $A_K>1.6$ even during our observations.
+and we expect extinctions $A_K \approx 4$ even during our observations.
 Therefore, the NIR is the logical wavelength range.  We also need
 high spatial resolution to separate the central object from the
 relatively bright nova remnant.  NIR AO provides this.
 
-From the work of Woudt et al., it is clear NACO is an excellent
-choice for these observations.  It is also the best choice, as other
-instruments require brighter, closer-by guide stars.  In particular,
+NACO is also one of the only instruments that allows for a guide star that is separated by 23\arcsec. In particular,
 for this reason, neither NICI on Gemini South nor Altair+NIRI on
 Gemini North are suitable -- which is the reason for this submission
 to ESO by proposers from Canada.  (The absence of nearby bright guide
@@ -503,10 +472,6 @@ stars is also one reason we did not propose for SINFONI, which might
 have seemed a better instrument to try to tease out a spectrum from
 the surrounding nebula.)
 
-An additional benefit of using NACO is that, as it was used before,
-it will be easier to explore the morphological evolution of the
-remnant.  In that respect, this is timely, since NACO will be
-decommissioned soon.
 %
 }
 
@@ -535,7 +500,10 @@ logical choice.}
 %  the last 2 years (4 observing periods). Describe the status of the
 %  data obtained and the scientific output generated.
 
-\LastObservationRemark{Van Kerkwijk and Lepo obtained FLAMES data Fall
+\LastObservationRemark{
+Van Kerkwijk, Kerzendorf and Lepo have obtained imaging and spectral observations for this object as described in our science justification.
+
+Van Kerkwijk and Lepo obtained FLAMES data Fall
  2010 in the context of 386.D-0541(A), ``A hunt for supernova type Ia
  progenitors among optically faint, UV-bright stars in the Small
  Magellanic Cloud.'' The data are beautiful and have been fully
