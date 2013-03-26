@@ -479,9 +479,9 @@
 \WhyLunarPhase{No constraints, since the observations are taken in the NIR.}  
 
 \WhyNights{%
- To measure the Hydrogen/Helium emission lines as well as stellar parameters we need a spectrum with a S/N$\approx20$. 
+ To measure the Hydrogen/Helium emission lines as well as stellar parameters we need a spectrum with a S/N$\approx30$. 
  
- Our previous observations used the acquisition template `NACO\_img\_acq\_MoveToSlit'  with 00:17:41.00 and 4 coadds with 634.75~s each filling an OB with exactly one hour (to obtain an ABBA pattern). Which leaves  4 integration times of 634.75 s to fill an hour. We propose for two such OBs, which results in a S/N of 20 using the ETC
+ Our previous observations used the acquisition template `NACO\_img\_acq\_MoveToSlit'  with 00:17:41.00 and 4 coadds with 634.75~s each filling an OB with exactly one hour (to obtain an ABBA pattern). Which leaves  4 integration times of 634.75 s to fill an hour. This resulted in a S/N=10 and we have ascertained (using the ETC) that with better conditions (0.6\arcsec seeing and CLR conditions) we obtain a $\textrm{S/N}\approx15$. We can therefore reach our target S/N=30 with 16 NDITs of 634.75s, resulting in a total of 4 OBS with 1 hour each when taking overheads into account. 
 
 }
 
@@ -1092,7 +1092,7 @@ also by Woudt et al. (2009)}
 %\INSconfig{}{NACO}{APP 27 mas/px VIS-WFS}{select Lp and/or NB_4.05}
 %
 %\INSconfig{}{NACO}{SPEC IR-WFS}{provide the list of spectroscopic modes HERE}
-\INSconfig{A}{NACO}{SPEC VIS-WFS}{S54_3_SK}
+\INSconfig{A}{NACO}{SPEC VIS-WFS}{S54 3 SK}
 % % 
 %
 %-----------------------------------------------------------------------
