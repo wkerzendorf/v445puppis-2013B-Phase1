@@ -57,7 +57,7 @@
 %
 
 \documentclass{esoform}
-\let\ifpdf\relax
+
 % The list of LaTeX definitions of commonly used astronomical symbols
 % is already included in the style file common2e.sty (see Table 1 in
 % the Users' Manual).  If you have your own macros or definitions,
@@ -78,11 +78,11 @@
 %
 %---- BOX 1 ------------------------------------------------------------
 %
-% You should use this template for period 90A applications ONLY.
+% You should use this template for period 92A applications ONLY.
 %
 % DO NOT EDIT THE MACRO BELOW. 
 
-\Cycle{90A}
+\Cycle{92A}
 
 % Type below, within the curly braces {}, the title of your observing
 % programme (up to two lines).
@@ -98,7 +98,7 @@
 \SubCategoryCode{D6}   
 
 % Please specify the type of programme you are submitting. 
-% Valid values: NORMAL, GTO, TOO, CALIBRATION
+% Valid values: NORMAL, GTO, TOO, CALIBRATION, MONITORING
 % If you specify TOO, you will also need to fill a ToO page below.
 % If you specify CALIBRATION, then the SubCategory Code MUST be set to L0
 
@@ -115,7 +115,7 @@
 
 % For TOO proposals only: uncomment the following if you apply for
 % Rapid Response Mode observations.
-
+ 
 %\ObservationInRRM{}
 
 % Uncomment the following macro if this proposal is applying for time
@@ -131,17 +131,20 @@
 % DO NOT USE ANY TEX/LATEX MACROS IN THE ABSTRACT
 
 \Abstract{V445 Puppis was a unique nova.  Based on its slow lightcurve
- and spectra showing carbon but no hydrogen, it was almost certainly
- the first known helium nova, i.e., a nova triggered by unstable
- helium burning.  Intriguingly, the inferred white-dwarf mass is
- close to the Chandrasekhar limit, making the system a plausible type
- Ia supernova progenitor.  Its nature, though, is unclear.  The
- simplest explanation involves some type of helium-star donor, but a
+ and spectra showing helium and carbon but not hydrogen, it was almost
+ certainly the first known helium nova, i.e., a nova triggered by
+ unstable helium burning.  Intriguingly, the inferred white-dwarf mass
+ is close to the Chandrasekhar limit, making the system a plausible
+ type Ia supernova progenitor.  Its nature, though, is unclear.  The
+ simplest explanations involve some type of helium-star donor, but a
  white dwarf accreting and burning hydrogen could also build up a
  thick helium layer that ignites, and a veneer of hydrogen might
- escape notice.  In the first part of the project we uncovered 
- ( with successful NACO P90 imaging) that the star, enshrouded by dust for years, is finally visible. 
- We propose to scrutinize this object with NACO spectroscopy and study the current state of the system.}
+ escape notice.  In the first part of our project (in P90), we imaged
+ the source using NACO and found that, as hoped, the dusty ejecta that
+ had hidden the star for years had become sufficiently dilute to allow
+ infrared studies of the system.  Here, we propose to do the second
+ part, to try to determine the nature of the binary using NACO
+ spectroscopy.}
 
 %---- BOX 3 ------------------------------------------------------------
 %
@@ -156,19 +159,27 @@
 % Please note that only one run per intrument is allowed for APEX
 %
 % 2. PERIOD
-% Valid values: 90
-% Exception: VLT-XMM proposals, which are only accepted in odd periods,
-% can specify the next Period also. 
+% Valid values: 92
+% Exceptions:
+% Monitoring Programmes: These programmes can span up to four periods.
+%
+% VLT-XMM proposals: These are only accepted in odd periods and are 
+% also valid for the next period.
+%
 % This parameter is NOT checked at the pdfLaTeX compilation.
 %
 % 3. INSTRUMENT
-% Valid values: AMBER CRIRES EFOSC2 FEROS FLAMES FLASH FORS2 HARPS HAWKI ISAAC LABOCA MIDI NACO OMEGACAM SABOCA SHFI SINFONI SOFI SOFOSC Special3.6 SpecialAPEX SpecialNTT SpecialVLTI UVES VIMOS VIRCAM VISIR WFI XSHOOTER
+% Valid values: AMBER CHAMPP CRIRES EFOSC2 FLAMES FLASH FORS2 HARPS HAWKI ISAAC KMOS LABOCA MIDI NACO OMEGACAM SABOCA SHFI SINFONI SOFI SOFOSC Special3.6 SpecialAPEX SpecialNTT SpecialUT2 SpecialVLTI UVES VIMOS VIRCAM XSHOOTER
 % 
 % Only Chilean and GTO Programmes are accepted on OMEGACAM.
 % No normal programmes on OMEGACAM will be accepted.
+% Please note that only a subset of these instruments will be accepted
+% for Monitoring Programmes. Please see the Call for Proposals and the
+% ESOFORM User Manual for more details.
 %
 % 4. TIME REQUESTED
 % In hours for Service Mode, in nights for Visitor Mode.
+% In either case the time can be rounded up to  1 decimal place. 
 % This parameter is NOT checked at the pdfLaTeX compilation.
 % 
 % 5. MONTH PREFERENCE
@@ -193,7 +204,7 @@
 % If the field is left blank a default normal, non-TOO run is assumed.
 % If a TOO run is specified please make sure that you fill in the TOO page.
 
-\ObservingRun{A}{92}{NACO}{4h}{any}{n}{0.8}{THN}{s}{}
+\ObservingRun{A}{92}{NACO}{4h}{any}{n}{0.6}{CLR}{s}{}
 
 % Proprietary time requested.
 % Valid values: % 0, 1, 2, 6, 12
@@ -207,14 +218,14 @@
 % This macro is optional and can be commented out.
 % It is also NOT checked at the pdfLaTeX compilation.
 
-%\AwardedNights{}{}
+\AwardedNights{VLT/NACO}{2h in 090.D-0112}
 
 % Indicate below the telescope(s) and number of nights/hours still
 % necessary, in the future, to complete this programme, if any.
 % This macro is optional and can be commented out.
 % It is also NOT checked at the pdfLaTeX compilation.
 
-%\FutureNights{}{}
+\FutureNights{}{}
 
 %---- BOX 5 ------------------------------------------------------------
 %
@@ -225,9 +236,9 @@
 % This macro is optional and can be commented out.
 % It is also NOT checked at the pdfLaTeX compilation.
 
-\SpecialRemarks{}
-
-
+\SpecialRemarks{This is the follow-up promised in our P90 proposal for
+  the case the binary had become detectable again.}
+  
 %---- BOX 6 ------------------------------------------------------------
 % Please provide the ESO User Portal username for the Principal
 % Investigator (PI) in the \PI field.
@@ -240,7 +251,7 @@
 % all Co-I's are stored in the ESO database.
 % You can find all institute codes listed according to country
 % on the following webpage:
-% http://www.eso.org/sci/observing/proposals/countryselect.html
+% http://www.eso.org/sci/observing/phase1/countryselect.html
 %
 % For example, if the Co-I's full name is David Alan William Jones,
 % his affiliation is the Observatoire de Paris, Site de Paris, 
@@ -252,7 +263,7 @@
 
 \PI{VANKERKWIJK}
 \CoI{W.}{Kerzendorf}{1139}
-\CoI{K.}{Lepo}{2059}
+%\CoI{K.}{Lepo}{2059}
 
 % Please note: 
 % Due to the way in which the proposal receiver system parses
@@ -277,20 +288,11 @@
 % keeps hanging indefinitely.
 
 
-%---- BOX 7 ------------------------------------------------------------
-% 
-% If this proposal is part of a thesis work, uncomment the line below.
-% Valid values for the second parameter: s, m, n
-% This macro is NOT checked at the pdfLaTeX compilation.
-
-%\Thesis{A. Student. Data important for PhD thesis and student will 
-%  lead the project}{m}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% THE TWO PAGES OF THE SCIENTIFIC DESCRIPTION AND FIGURES %%%%%%%%%%
 %%%%%%%%%%%%%%%%%&&&%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%---- BOX 8 ------------------------------------------------------------
+%---- BOX 7 ------------------------------------------------------------
 %
 %               THIS DESCRIPTION IS RESTRICTED TO TWO PAGES 
 %
@@ -299,10 +301,8 @@
 %
 % All macros in this box are NOT checked at the pdfLaTeX compilation.
 
-\ScientificRationale{
+\ScientificRationale{\par
 %
- {\em This is the follow-up to the successful P90 proposal ??????}
-
  \smallskip{\bf Bizarre lives of dead stars: white dwarfs in binaries.}
  While in isolation white dwarfs do little but cool steadily, in
  binaries they display an extremely varied phenomenology, ranging
@@ -324,18 +324,18 @@
  companion (single-degenerate scenario), or a merger of two white
  dwarfs (double-degenerate scenario).
 
- Despite decades of study, however, the observational evidence
- remains confusing.  On the one hand, there is no sign of a
- non-degenerate companion in some supernovae (e.g., SN 2011fe, Nugent
- et al.\ 2011, Nature 480, 344; Bloom et al.\ 2012, ApJ 744, L17) and
- some supernova remnants (Schaefer \& Pagnotta, 2012, Nature, 481,
- 164; Kerzendorf et al.  2012, ApJ, Kerzendorf et al. 2013, subm. ) as well as a lack of
- suitable single-degenerate progenitor systems from both observations
- (Di Stefano 2010, ApJ 712, 728; Gilfanov \& Bogd\'an 2010, Nature
- 463, 924) and population synthesis (Ruiter et al.\ 2009, ApJ 699,
- 2026; Mennekens et al.\ 2010, A\&A 515, 89).  On the other hand, a
- fair fraction of all SN Ia show evidence for circumstellar medium
- that is most easily interpreted as winds from a companion or
+ Despite decades of study, however, the observational evidence remains
+ confusing.  On the one hand, there is no sign of a non-degenerate
+ companion in some supernovae (e.g., SN 2011fe, Nugent et al.\ 2011,
+ Nature 480, 344; Bloom et al.\ 2012, ApJ 744, L17) and some supernova
+ remnants (Schaefer \& Pagnotta, 2012, Nature, 481, 164; Kerzendorf et
+ al.\ 2012, ApJ, Kerzendorf et al. 2013, submitted) as well as a lack
+ of suitable single-degenerate progenitor systems from both
+ observations (Di Stefano 2010, ApJ 712, 728; Gilfanov \& Bogd\'an
+ 2010, Nature 463, 924) and population synthesis (Ruiter et al.\ 2009,
+ ApJ 699, 2026; Mennekens et al.\ 2010, A\&A 515, 89).  On the other
+ hand, a fair fraction of all SN Ia show evidence for circumstellar
+ medium that is most easily interpreted as winds from a companion or
  accretion disk (e.g., Patat et al. 2007, Science 317, 924; Sternberg
  et al.\ 2011, Science 333, 856).
 
@@ -357,16 +357,17 @@
  slow growth (Townsley \& Bildsten 2004, ApJ 600, 390, and references
  therein).
 
- The above problem can be circumvented in two ways.  First, in
- sources in which accretion is relatively fast, hydrogen is burnt
- steadily.  Such sources are identified observationally as supersoft
- sources.  Alternatively, one can have a helium-rich donor (e.g., a
- helium white dwarf, as in the AM CVn systems mentioned above; a
- subdwarf; or a helium giant).  For all above sources, however, there
- is another hurdle: as the layer of helium thickens, it in turn may
- ignite, leading to a {\em helium nova}.  The effect of these on
- growth has usually been ignored.  In part, this likely was because,
- until recently, no helium novae had been identified.
+ The above problem can be circumvented in two ways.  First, in sources
+ that accrete relatively quickly, hydrogen is burnt steadily
+ (observationally, these are the supersoft sources).  Alternatively,
+ one can have a helium-rich donor (e.g., a helium white dwarf, as in
+ the AM CVn systems mentioned above; a subdwarf; or a helium giant).
+ For all above sources, however, there is another hurdle: as the layer
+ of helium thickens, it in turn may ignite, leading to a {\em helium
+   nova}.  The effect of these on growth has usually been ignored (but
+ see Idan et al.\ 2012, J.~Ph.\ Conf.\ Ser.\ 337, 12051).  In part,
+ this likely was because, until recently, no helium novae had been
+ identified.
 
  \medskip{\bf The first helium nova: V445 Puppis.}
  The 2000 nova in Puppis was quickly found to be unusual, with
@@ -377,19 +378,25 @@
  a helium nova on a massive, likely $\ga\!1.35\,M_\odot$ white dwarf
  (Kato et al.\ 2008, ApJ 684, 1366), while NACO follow-up
  observations found it had led to a beautiful bipolar nebula with a
- thick equatorial waist (Woudt et al. 2009, ApJ 706, 738; also, ESO
+ thick equatorial waist (Woudt et al.\ 2009, ApJ 706, 738; also, ESO
  press release 0943).
 
- The pretty nebula also poses a problem, however, in that the
- equatorial waist obscures the binary. In the 2007 image by Woudt et al. the central star was not visible, however, our new image from late 2012 revealed that the dust had "settled" for the star to be visible (for comparison see Figure~\ref{fig:v445img}). This only took half of our allocated time so we changed the OB and obtained a spectrum. With a S/N=6 the quality was too low for us to extract any useful information.
- 
- From pre-explosion imaging we measure an unusual high luminosity  for a cataclysmic variable, and
- the system's nature thus remains unclear: is the companion very
- luminous (but it is too blue to be a symbiotic), is the accretion
- disk very large, or did the system host a supersoft source?
- Furthermore, does the absence of evidence for hydrogen reflect the
- absence of hydrogen, or an undetectable amount of hydrogen (as might
- happen in a supersoft source)?
+ The pretty nebula also posed a problem, however: the equatorial waist
+ obscured the binary (see figure).  As a result, the only clues to its
+ nature were that pre-explosion V445 Pup had $V\simeq14.5$ and
+ $V-K\simeq3.0$, and that it was variable at the 10\% level.  At the
+ distance of $8.2\pm0.5\,$kpc inferred from the expansion of the
+ nebula by Woudt et al., and correcting for interstellar reddening
+ $E_{B-V}\simeq0.5$, the implied luminosity is $L\simeq2000\,L_\odot$
+ and the intrinsic color $(V-K)_0\simeq1.6$ (or more luminous and
+ bluer if there is substantial circumstellar reddening).
+
+ The above luminosity is puzzlingly high for a cataclysmic variable.
+ Could the companion be very luminous? (But it is too blue to be a
+ symbiotic.) Or is the accretion disk very large?  Or might the system
+ host a supersoft source?  Furthermore, does the absence of evidence
+ for hydrogen reflect the absence of hydrogen, or an undetectable
+ amount of hydrogen (as might happen in a supersoft source)?
 
  These questions have broader implications: if the accretion rate was
  such that the system had regular nova events, it implies that novae
@@ -409,20 +416,36 @@
 %
 }
 
-\ImmediateObjective{We propose to use 2 hours of NACO AO spectropscopy to
- ascertain its nature: Is the binary hydrogen or helium rich? How
- large and luminous is the companion? How large is the accretion
- disk? Did the system host a supersoft source?
+\ImmediateObjective{%
+%
+ For our P90 proposal, we were granted 2 hours of NACO AO imaging to
+ determine whether V445 Pup had become visible again, as we hoped
+ might be the case given that the expansion of the nebula should have
+ substantially decreased the dust column.  Our first observation,
+ taken in last December, amply fulfilled our hopes (see figure): the
+ source had re-appeared with $K\simeq16.5$.
 
+ Having foreseen the possibility of being so lucky, we had requested
+ the second one-hour observing block to be scheduled well after the
+ first, so we might use it for spectroscopy instead of another image
+ and thus get a first glimpse at the nature of the system.  While the
+ resulting spectrum -- taken end of January -- is too noisy for
+ classification (typical signal-to-noise of 10 per 1\,nm pixel), it
+ suffices to show there are no strong spectral features.  The absence
+ of strong emission features implies that the contribution from the
+ nebula is minimal, and strongly suggests that the contribution from
+ the accretion disk is small as well.  Hence, most likely the
+ companion dominates and our ultimate goal of determining its nature
+ is possible.
 
-In our previous observation run we detected stars magnitude to $K\approx15.5$. 
-For constant expansion, the dust column density and
- hence the extinction scale as $\rho R\propto R^{-2}\propto t^{-2}$,
- and thus in late 2013/early 2014 it should be reduced to $K\approx15.3$.
- 
- ??? WE use Slit_86mas with spectroscopic mode S54_3_SK - high resolution (R~1400) - 1.79-2.57 um ??
- We propose two OBs with 0.7 h on target, to get a spectrum with the necessary quality to obtain the aforementioned science goals.
-
+ Here, we proprose to obtain a better spectrum, suitable for
+ classification.  Specifically, we aim for a final signal-to-noise
+ ratio of 30, by integrating four times longer and using better
+ conditions (and thus AO correction): 0.6 arcsec seeing (instead of
+ 0.8), and clear sky (instead of thin clouds - causing an absorption of 0.2 mag).  With this, we should
+ be able to ascertain the nature of V445~Pup: Is the binary hydrogen
+ or helium rich? How large and luminous is the companion? How large is
+ the accretion disk? Did the system host a supersoft source?
 %
 }
 %
@@ -433,17 +456,21 @@ For constant expansion, the dust column density and
 % exceed TWO pages in total. 
 % If you use color figures, do make sure that they are still readable
 % if printed in black and white. Figures must be in PDF or JPEG format.
+% Each figure has a size limit of 1MB.
 % MakePicture and MakeCaption are optional macros and can be commented out.
 
 \MakePicture{v445pup_2007vs2012_cut.pdf}{angle=0,width=1.0\textwidth}
 \MakeCaption{Fig.~1: NACO observations taken March 2007 by Woudt et
- al. (on the left) and Our observations taken in December 2012 (on the right). The binary is now visible with $K\approx15.5$.}
+  al. (on the left) and our observations taken in December 2012 (on
+  the right). The binary is now visible with $K\simeq16.5$.  (Note
+  that we used very different stretch for the two figures, to show how
+  much fainter the companion was in 2007.)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% THE PAGE OF TECHNICAL JUSTIFICATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%---- BOX 9 ------------------------------------------------------------
+%---- BOX 8 ------------------------------------------------------------
 %
 % Provide below a careful justification of the requested lunar phase
 % and of the requested number of nights or hours.  
@@ -452,9 +479,9 @@ For constant expansion, the dust column density and
 \WhyLunarPhase{No constraints, since the observations are taken in the NIR.}  
 
 \WhyNights{%
- To measure the Hydrogen/Helium emission lines as well as stellar parameters we need a spectrum with a S/N$\approx20$. 
+ To measure the Hydrogen/Helium emission lines as well as stellar parameters we need a spectrum with a S/N$\approx30$. 
  
- Our previous observations used the acquisition template `NACO_img_acq_MoveToSlit'  with 00:17:41.00 and 4 coadds with 634.75~s each filling an OB with exactly one hour (to obtain an ABBA pattern). Which leaves  4 integration times of 634.75 s to fill an hour. We propose for two such OBs, which results in a S/N of 20 using the ETC
+ Our previous observations used the acquisition template `NACO\_img\_acq\_MoveToSlit'  with 00:17:41.00 and 4 coadds with 634.75~s each filling an OB with exactly one hour (to obtain an ABBA pattern). Which leaves  4 integration times of 634.75 s to fill an hour. This resulted in a S/N=10 and we have ascertained (using the ETC) that with better conditions (0.6\arcsec seeing and CLR conditions) we obtain a $\textrm{S/N}\approx15$. We can therefore reach our target S/N=30 with 16 NDITs of 634.75s, resulting in a total of 4 OBs with 1 hour each when taking overheads into account. 
 
 }
 
@@ -484,15 +511,15 @@ logical choice.}
 % In case of special calibration the second parameter is used to enter 
 % specific details.
 % Valid values: standard, special
-%\Calibrations{sta}{Adopt a special calibration}
+%\Calibrations{special}{Adopt a special calibration}
 \Calibrations{standard}{}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% PAGE OF BOXES 10-11 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PAGE OF BOXES 9-10  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%---- BOX 10 -- Use of ESO Facilities --------------------------------
+%---- BOX 9 -- Use of ESO Facilities --------------------------------
 %
 % This macro is optional and can be commented out.
 % It is also NOT checked at the pdfLaTeX compilation.
@@ -509,8 +536,9 @@ Van Kerkwijk and Lepo obtained FLAMES data Fall
  Magellanic Cloud.'' The data are beautiful and have been fully
  reduced and analysed.  The manuscript is to be submitted shortly
  (after the current proposal deadlines have passed).}
+
 %
-%---- BOX 10a -- ESO Archive ------------------------------------------
+%---- BOX 9a -- ESO Archive ------------------------------------------
 %
 % Are the data requested in this proposal in the ESO Archive
 % (http://archive.eso.org)? If yes, explain the need for new data.
@@ -519,7 +547,7 @@ Van Kerkwijk and Lepo obtained FLAMES data Fall
 \RequestedDataRemark{Data for V445 Puppis exists, but only now the central star is visible to take a spectrum.}
 
 %
-%---- BOX 10b -- ESO GTO/Public Survey Programme Duplications---------
+%---- BOX 9b -- ESO GTO/Public Survey Programme Duplications---------
 %
 % If any of the targets/regions in ongoing GTO Programmes and/or
 % Public Surveys are being duplicated here, please explain why.
@@ -530,7 +558,7 @@ Van Kerkwijk and Lepo obtained FLAMES data Fall
 or GTO programs.} 
 
 %
-%---- BOX 11 ------ Applicant(s) publications ---------------------
+%---- BOX 10 ------ Applicant(s) publications ---------------------
 %
 % Applicant's publications related to the subject of this proposal
 % during the past two years.  Use the simplified abbreviations for
@@ -572,7 +600,7 @@ Kerzendorf, Wolfgang E.; Yong, David; Schmidt, Brian P.; Simon, Joshua D.; Jeffe
 %%%%% THE PAGE OF THE TARGET/FIELD LIST %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%---- BOX 12 -----------------------------------------------------------
+%---- BOX 11 -----------------------------------------------------------
 %
 % Complete list of targets/fields requested.  The macro takes nine
 % parameters: run ID, target field/name, RA, Dec, time on target, magnitude, 
@@ -619,18 +647,21 @@ Kerzendorf, Wolfgang E.; Yong, David; Schmidt, Brian P.; Simon, Joshua D.; Jeffe
 %
 %                       ** VERY IMPORTANT ** 
 % The scheduling of your programme will take into account ALL targets
-% given in this list. INCLUDE ONLY TARGETS REQUESTED FOR P90 !
+% given in this list. INCLUDE ONLY TARGETS REQUESTED FOR P92 !
 % (except for VLT-XMM proposals)
 %
 % DO NOT USE ANY TEX/LATEX MACROS FOR THE TARGETS
 
 \Target{A}{V445 Puppis}{07 37 56.90}{-25 56 58.9}{1.0}{16}{}{}{2MASS J07375835-2556462}
 
+
 %                      ***************** 
 %                      ** PWV limits **
 % For CRIRES and all APEX instruments users must specify the PWV upper
 % limits for each target. For example:
 %\Target{}{Alpha Ori}{06 45 08.9}{-16 42 58}{1}{-1.4}{6 mas}{PWV=1.0mm, Sirius}{}
+%\Target{}{HD 104237}{12 00 05.6}{-78 11 33}{1}{}{}{PWV<0.7mm;LST=9h00-15h00}{}
+%
 %                      *****************
 
 % Use TargetNotes to include any comments that apply to several or all
@@ -645,7 +676,7 @@ also by Woudt et al. (2009)}
 %%%%% TWO PAGES OF SCHEDULING REQUIREMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%---- BOX 13 -----------------------------------------------------------
+%---- BOX 12 -----------------------------------------------------------
 %
 
 % Uncomment the following line if the proposal involves time-critical
@@ -655,7 +686,7 @@ also by Woudt et al. (2009)}
 % other flags in Box 13.
 %
 %
-\HasTimingConstraints{}
+%\HasTimingConstraints{}
 
 %
 % The timing constraint macros listed below 
@@ -672,7 +703,7 @@ also by Woudt et al. (2009)}
 % 2nd argument: run splitting requested for sub-runs
 % This parameter is NOT checked at the pdfLaTeX compilation.
 
-\RunSplitting{A}{1H,10w,1H}
+%\RunSplitting{A}{1H,10w,1H}
 %\RunSplitting{C}{2,10s,2,20w,2,15s,4H2}
 
 
@@ -694,13 +725,13 @@ also by Woudt et al. (2009)}
 % Format: dd-mmm-yyyy
 % This parameter is NOT checked at the pdfLaTeX compilation.
 
-%\UnsuitableTimes{A}{15-jan-13}{18-jan-13}{Insert explanation of unsuitable time here.}
-%\UnsuitableTimes{B}{15-jan-13}{18-jan-13}{Insert explanation of unsuitable time here.}
-%\UnsuitableTimes{C}{20-jan-13}{23-jan-13}{Insert explanation of unsuitable time here.}
+%\UnsuitableTimes{A}{15-jan-14}{18-jan-14}{Insert explanation of unsuitable time here.}
+%\UnsuitableTimes{B}{15-jan-14}{18-jan-14}{Insert explanation of unsuitable time here.}
+%\UnsuitableTimes{C}{20-jan-14}{23-jan-14}{Insert explanation of unsuitable time here.}
 
 
 %
-%---- BOX 13 contd.. -- Scheduling Requirements 
+%---- BOX 12 contd.. -- Scheduling Requirements 
 %
 
 % SPECIFIC DATE(S) FOR TIME-CRITICAL OBSERVATIONS
@@ -716,10 +747,10 @@ also by Woudt et al. (2009)}
 % 3rd argument: Chilean end date for the critical period.
 % Format: dd-mmmm-yyyy
 
-%\TimeCritical{A}{12-nov-12}{14-nov-12}{Insert reason for time-critical observations.}
-%\TimeCritical{D}{1-nov-12}{2-nov-12}{Insert reason for time-critical observations.}
-%\TimeCritical{D}{17-nov-12}{18-nov-12}{Insert reason for time-critical observations.}
-%\TimeCritical{D}{23-nov-12}{24-nov-12}{Insert reason for time-critical observations.}
+%\TimeCritical{A}{12-nov-13}{14-nov-13}{Insert reason for time-critical observations.}
+%\TimeCritical{D}{1-nov-13}{2-nov-13}{Insert reason for time-critical observations.}
+%\TimeCritical{D}{17-nov-13}{18-nov-13}{Insert reason for time-critical observations.}
+%\TimeCritical{D}{23-nov-13}{24-nov-13}{Insert reason for time-critical observations.}
 
 
 
@@ -756,7 +787,7 @@ also by Woudt et al. (2009)}
 %\INSconfig{D}{NACO}{IMG 54 mas/px VIS-WFS}{provide list of filters HERE}
 %\INSconfig{E}{AMBER}{LR-HK}{2.2}
 %\INSconfig{F}{MIDI}{PRISM}{HIGH-SENS}
-
+%
 % Real list of instrument configurations
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -767,7 +798,7 @@ also by Woudt et al. (2009)}
 %-----------------------------------------------------------------------
 %
 %\INSconfig{}{CRIRES}{no-AO}{Provide list of reference wavelengths HERE}
-% If you plan to use the a NGS, please specify the NGS name in target list.
+% If you plan to use a NGS, please specify the NGS name in target list.
 %\INSconfig{}{CRIRES}{NGS}{Provide list of reference wavelengths HERE}
 %
 %
@@ -797,6 +828,11 @@ also by Woudt et al. (2009)}
 %\INSconfig{}{FORS2}{HIT-MS}{Provide list of grisms HERE}
 %\INSconfig{}{FORS2}{RRM}{yes}
 %
+%-----------------------------------------------------------------------
+%---- KMOS at the VLT-UT1 (ANTU) ---------------------------------------
+%-----------------------------------------------------------------------
+%
+%\INSconfig{}{KMOS}{IFU}{provide list of settings (IZ, YJ, H, K, HK) here} 
 %
 %-----------------------------------------------------------------------
 %---- UVES at the VLT-UT2 (KUEYEN) -------------------------------------
@@ -937,9 +973,6 @@ also by Woudt et al. (2009)}
 %\INSconfig{}{XSHOOTER}{IFU}{readout UVB,readout VIS,readout NIR}
 %\INSconfig{}{XSHOOTER}{SLT}{readout UVB,readout VIS,readout NIR}
 %
-
-
-%
 %
 %-----------------------------------------------------------------------
 %---- ISAAC at the VLT-UT3 (MELIPAL) --------------------------------------
@@ -956,6 +989,8 @@ also by Woudt et al. (2009)}
 %\INSconfig{}{ISAAC}{LWS-MR}{Provide central wavelength(s) HERE}
 %\INSconfig{}{ISAAC}{SWP}{Provide list of filters HERE}
 %\INSconfig{}{ISAAC}{RRM}{yes}
+%
+%
 %
 %-----------------------------------------------------------------------
 %---- VIMOS at the VLT-UT3 (MELIPAL) -----------------------------------
@@ -992,24 +1027,6 @@ also by Woudt et al. (2009)}
 %
 %
 %-----------------------------------------------------------------------
-%---- VISIR at the VLT-UT3 (MELIPAL) -----------------------------------
-%-----------------------------------------------------------------------
-%
-%\INSconfig{}{VISIR}{PRE-IMG}{Provide list of filters HERE}
-%\INSconfig{}{VISIR}{IMG N-band 45 mas/px}{Provide list of filters HERE}
-%\INSconfig{}{VISIR}{IMG N-band 76 mas/px}{Provide list of filters HERE}
-%\INSconfig{}{VISIR}{IMG Q-band 45 mas/px}{Provide list of filters HERE}
-%\INSconfig{}{VISIR}{IMG Q-band 76 mas/px}{Provide list of filters HERE}
-%\INSconfig{}{VISIR}{BURST}{Provide list of filters HERE}
-%\INSconfig{}{VISIR}{SPEC N-band LR}{-}
-%\INSconfig{}{VISIR}{SPEC N-band MR}{Provide central wavelength(s) in the ranges (7.4-9.4), (10.2-13.0) HERE}
-%\INSconfig{}{VISIR}{SPEC Q-band MR}{Provide central wavelength(s) in the ranges (17.1-19.0), (19.9-20.3) HERE}
-%\INSconfig{}{VISIR}{SPEC N-band HR Longslit}{Provide central wavelengt(s) (8.02,12.81) HERE}
-%\INSconfig{}{VISIR}{SPEC Q-band HR Longslit}{Provide central wavelength(s) (17.03) HERE}
-%\INSconfig{}{VISIR}{SPEC N-band HRCrossdispersed}{Provide central wavelength(s) (8.99,9.66,10.51,10.52,11.57,11.76,12.27,12.47,12.81-13.30)}
-%\INSconfig{}{VISIR}{SPEC Q-band HRCrossdispersed}{Provide central wavelength(s) (16.39,16.92,17.88,17.93,18.24,18.71,21.29) HERE}
-%
-%-----------------------------------------------------------------------
 %---- NAOS/CONICA at the VLT-UT4 (YEPUN) -------------------------------
 %-----------------------------------------------------------------------
 %
@@ -1040,10 +1057,7 @@ also by Woudt et al. (2009)}
 %\INSconfig{}{NACO}{SAMPol VIS-WFS}{Provide list of masks and filters HERE}
 %\INSconfig{}{NACO}{SAMPol IR-WFS}{Provide list of masks and filters HERE}
 %
-
-%!!!! HAVE TO THINK ABOUT INSTRUMENT SETUP!!!!
 %\INSconfig{}{NACO}{IMG 54 mas/px IR-WFS}{provide list of filters HERE}
-%\INSconfig{A}{NACO}{IMG 27 mas/px IR-WFS}{Ks}
 %\INSconfig{}{NACO}{IMG 27 mas/px IR-WFS}{provide list of filters HERE}
 %\INSconfig{}{NACO}{IMG 13 mas/px IR-WFS}{provide list of filters HERE}
 %\INSconfig{}{NACO}{IMG 54 mas/px VIS-WFS}{provide list of filters HERE}
@@ -1062,8 +1076,8 @@ also by Woudt et al. (2009)}
 %\INSconfig{}{NACO}{CORONA 4QPM IR-WFS}{provide list of filters (H,K) HERE}
 %\INSconfig{}{NACO}{CORONA 4QPM VIS-WFS}{provide list of filters (H,K) HERE}
 %
-%\INSconfig{}{NACO}{SDI+4 IR-WFS}{comments}
-%\INSconfig{}{NACO}{SDI+4 VIS-WFS}{comments}
+%\INSconfig{}{NACO}{CORONA AGPM VIS-WFS}{provide list of filters (L',NB_3.74,NB_4.05) HERE}
+%\INSconfig{}{NACO}{CORONA AGPM IR-WFS}{provide list of filters (L',NB_3.74,NB_4.05) HERE}
 %
 %\INSconfig{}{NACO}{POL 54 mas/px IR-WFS}{provide list of filters HERE}
 %\INSconfig{}{NACO}{POL 27 mas/px IR-WFS}{provide list of filters HERE}
@@ -1078,7 +1092,7 @@ also by Woudt et al. (2009)}
 %\INSconfig{}{NACO}{APP 27 mas/px VIS-WFS}{select Lp and/or NB_4.05}
 %
 %\INSconfig{}{NACO}{SPEC IR-WFS}{provide the list of spectroscopic modes HERE}
-\INSconfig{A}{NACO}{SPEC VIS-WFS}{provide the list of spectroscopic modes HERE}
+\INSconfig{A}{NACO}{SPEC VIS-WFS}{S54 3 SK}
 % % 
 %
 %-----------------------------------------------------------------------
@@ -1115,10 +1129,10 @@ also by Woudt et al. (2009)}
 %%-----------------------------------------------------------------------
 %---- HAWKI at the VLT-UT4 (YEPUN) -----------------------------------
 %-----------------------------------------------------------------------
-%\INSconfig{}{HAWKI}{PRE-IMG}{provide list of filters (Y,J,H,Ks,CH4,BrG,H2,NB1060,NB1190,NB2090) HERE}
-%\INSconfig{}{HAWKI}{IMG}{provide list of filters (Y,J,H,Ks,CH4,BrG,H2,NB1060,NB1190,NB2090) HERE}
-%\INSconfig{}{HAWKI}{BURST}{Provide list of filters  (Y,J,H,Ks,CH4,BrG,H2,NB1060,NB1190,NB2090) HERE}
-%\INSconfig{}{HAWKI}{FASTJITT}{Provide list of filters  (Y,J,H,Ks,CH4,BrG,H2,NB1060,NB1190,NB2090) HERE}
+%\INSconfig{}{HAWKI}{PRE-IMG}{provide list of filters (Y,J,H,Ks,CH4,BrG,H2,NB0984,NB1060,NB2090) HERE}
+%\INSconfig{}{HAWKI}{IMG}{provide list of filters (Y,J,H,Ks,CH4,BrG,H2,NB0984,NB1060,NB2090) HERE}
+%\INSconfig{}{HAWKI}{BURST}{Provide list of filters  (Y,J,H,Ks,CH4,BrG,H2,NB0984,NB1060,NB2090) HERE}
+%\INSconfig{}{HAWKI}{FASTJITT}{Provide list of filters  (Y,J,H,Ks,CH4,BrG,H2,NB0984,NB1060,NB2090) HERE}
 %\INSconfig{}{HAWKI}{RRM}{yes}
 %
 %-----------------------------------------------------------------------
@@ -1129,7 +1143,11 @@ also by Woudt et al. (2009)}
 %---- MIDI -------------------------------------------------------------
 %-----------------------------------------------------------------------
 %
+%
 %\INSconfig{}{MIDI}{PRISM}{CORR-FLUX}
+%
+% For MIDI + PRIMA - FSU
+%\INSconfig{}{MIDI}{PRISM}{CORR-FLUX-F} 
 %
 %\INSconfig{}{MIDI}{PRISM}{HIGH-SENS}
 %\INSconfig{}{MIDI}{GRISM}{HIGH-SENS}
@@ -1230,7 +1248,7 @@ also by Woudt et al. (2009)}
 %-----------------------------------------------------------------------
 %
 %\INSconfig{}{HARPS}{spectro-Thosimult}{HARPS}
-%\INSconfig{}{HARPS}{spectro-Thosimult}{EGGS}
+%\INSconfig{}{HARPS}{WAVE}{HARPS}
 %\INSconfig{}{HARPS}{spectro-ObjA(B)}{HARPS}
 %\INSconfig{}{HARPS}{spectro-ObjA(B)}{EGGS}
 %\INSconfig{}{HARPS}{spectro-polarimetry}{linear}
@@ -1257,6 +1275,15 @@ also by Woudt et al. (2009)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Chajnantor
 %-----------------------------------------------------------------------
+%---- SHFI at APEX ----------------------------------------------
+%-----------------------------------------------------------------------
+%
+%\INSconfig{}{SHFI}{APEX-1}{Please enter Central Frequency 211 to 275 GHz}
+%\INSconfig{}{SHFI}{APEX-2}{Please enter Central Frequency 275 to 370 GHz}
+%\INSconfig{}{SHFI}{APEX-3}{Please enter Central Frequency 385 to 500 GHz} 
+%\INSconfig{}{SHFI}{APEX-T2}{Please enter Central Frequency 1.25 to 1.39 THz}
+%
+%-----------------------------------------------------------------------
 %---- LABOCA at APEX ----------------------------------------------
 %-----------------------------------------------------------------------
 %
@@ -1270,18 +1297,19 @@ also by Woudt et al. (2009)}
 %\INSconfig{}{SABOCA}{IMG}{-}
 %\INSconfig{}{SABOCA}{PHOT}{-}
 %
+%-----------------------------------------------------------------------
+%---- FLASH at APEX ----------------------------------------------
+%-----------------------------------------------------------------------
+%
+%\INSconfig{}{FLASH}{-}{Please enter Central Frequency 272 to 377 GHz and 385 to 495 GHz}
 %
 %-----------------------------------------------------------------------
-%---- SHFI at APEX ----------------------------------------------
+%---- CHAMP+ at APEX ----------------------------------------------
 %-----------------------------------------------------------------------
 %
-%\INSconfig{}{SHFI}{APEX-1}{Please enter Central Frequency 211 to 275 GHz}
-%\INSconfig{}{SHFI}{APEX-2}{Please enter Central Frequency 275 to 370 GHz}
-%\INSconfig{}{SHFI}{APEX-3}{Please enter Central Frequency 385 to 500 GHz} 
-%\INSconfig{}{SHFI}{APEX-T2}{Please enter Central Frequency 1.25 to 1.39 THz}
-%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\INSconfig{}{CHAMPP}{-}{Please enter Central Frequency 620 to 729 GHz and 780 to 900 GHz}
+%-----------------------------------------------------------------------
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1354,7 +1382,7 @@ also by Woudt et al. (2009)}
 % Note: For MIDI observations in any mode, please indicate 10.6 as
 % wavelength of observation.
 %
-% The available baselines for Period 90 are shown below.
+% The available baselines for Period 92 are shown below.
 % For AT observations, the time can be split at Phase 2 among the
 % different 2-telescope (for MIDI) or 3-telescope (AMBER) baselines
 % of the chosen quadruplet. All possible 2-telescope (MIDI) or
@@ -1465,3 +1493,5 @@ also by Woudt et al. (2009)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \MakeProposal
 \end{document}
+
+
